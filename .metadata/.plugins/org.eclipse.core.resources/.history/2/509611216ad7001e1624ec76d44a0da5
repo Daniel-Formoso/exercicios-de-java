@@ -1,0 +1,57 @@
+/*Fazer um programa para ler um conjunto de N nomes de alunos, bem como as notas que eles tiraram
+no 1º e 2º semestres. Cada uma dessas informações deve ser armazenada em um vetor. Depois, imprimir
+os nomes dos alunos aprovados, considerando aprovados aqueles cuja média das notas seja maior ou
+igual a 6.0 (seis).*/
+
+package applicationEx10;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class aprovados {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		String nome = "";
+		int n = 0;
+		double notaS1 = 0, notaS2 = 0, media = 0;
+		
+		System.out.print("Quantos alunos serão digitados? ");
+		n = sc.nextInt();
+		
+		double[] vetorNotaS1 = new double[n];
+		double[] vetorNotaS2 = new double[n];
+		double[] somaNotas = new double[n];
+
+		for (int i = 0; i < vetorNotaS1.length; i++) {
+			System.out.println("Digite as informações do " +(i + 1)+ "º aluno: ");
+			System.out.print("Nome: ");
+			nome = sc.next();
+			System.out.print("Nota 1º semestre: ");
+			vetorNotaS1[i] = sc.nextDouble();
+			System.out.print("Nota 2º semestre: ");
+			vetorNotaS2[i] = sc.nextDouble();
+		}
+		
+		
+		// soma
+		for (int i = 0; i < vetorNotaS1.length; i++) {
+			somaNotas[i] = vetorNotaS1[i] + vetorNotaS2[i];
+		}
+		
+		// media
+		
+		for (int i = 0; i < somaNotas.length; i++) {
+			media = somaNotas.length / 2;
+		}
+		
+		System.out.println();
+		
+		sc.close();
+		
+	}
+
+}

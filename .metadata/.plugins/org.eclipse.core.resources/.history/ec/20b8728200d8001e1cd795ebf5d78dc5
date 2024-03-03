@@ -1,0 +1,10 @@
+package applicationEx10;
+
+public class dados_pessoas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

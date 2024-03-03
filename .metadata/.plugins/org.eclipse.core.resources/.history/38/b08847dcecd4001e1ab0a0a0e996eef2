@@ -1,0 +1,30 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Conta;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Conta conta = new Conta();
+				
+		System.out.print("Número cliente: ");
+		conta.numConta = sc.nextInt();
+		System.out.print("Nome: ");
+		conta.nomeCliente = sc.next();
+		System.out.print("Possui depósito inicial? (s/n)");
+		char resp = sc.next().charAt(0);
+		
+		
+		
+		sc.close();
+		
+	}
+
+}

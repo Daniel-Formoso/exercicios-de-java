@@ -1,0 +1,29 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Conversor;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Conversor conversor = new Conversor();
+		
+		System.out.print("Preço do dólar: ");
+		conversor.dolarDia = sc.nextDouble();
+		
+		System.out.print("Quer comprar quantos dólares? ");
+		conversor.valorDolares = sc.nextDouble();
+		
+		System.out.printf("Você vai pagar em reais: %.2f%n", conversor.novoValor());
+		
+		sc.close();
+		
+	}
+
+}

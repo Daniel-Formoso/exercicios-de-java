@@ -1,0 +1,76 @@
+/*Fazer um programa para ler nome, idade e altura de N pessoas, conforme exemplo. Depois, mostrar na
+tela a altura média das pessoas, e mostrar também a porcentagem de pessoas com menos de 16 anos,
+bem como os nomes dessas pessoas caso houver. 
+*/
+
+package applicationEx3;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entitiesEx3.Pessoas;
+
+public class alturas {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Quantas pessoas serão digitadas? ");
+		int n = sc.nextInt();
+
+		// pessoas seria o vect
+		// Pessoas[n] é a classe
+
+		Pessoas[] pessoas = new Pessoas[n];
+
+		for (int i = 0; i < pessoas.length; i++) {
+			System.out.println("Digite os dados da " + (i + 1) + "ª pessoa: ");
+			System.out.print("\nNome: ");
+			String nome = sc.next();
+			System.out.print("Idade: ");
+			int idade = sc.nextInt();
+			System.out.print("Altura: ");
+			double altura = sc.nextDouble();
+
+			// Criando um objeto Pessoas com os dados fornecidos
+			// e adicionando ao vetor
+
+			pessoas[i] = new Pessoas(nome, idade, altura);
+		}
+
+		// Calculando e mostrando a média das alturas das pessoas
+
+		double somaAlturas = 0;
+		for (Pessoas pessoa : pessoas) {
+			somaAlturas += pessoa.getAltura();
+		}
+
+		double mediaAltura = somaAlturas / pessoas.length;
+		System.out.printf("A média das alturas das pessoas é: %.2f\n", mediaAltura);
+
+		// Calculando e mostrando a porcentagem de pessoas com menos de 16 anos
+
+		int contadorMenos16 = 0;
+		for (Pessoas pessoa : pessoas) {
+			if (pessoa.getIdade() < 16) {
+				contadorMenos16++;
+			}
+		}
+
+		double porcentagemMenos16 = (double) contadorMenos16 / N * 100;
+		System.out.printf("Porcentagem de pessoas com menos de 16 anos: %.2f%%\n", porcentagemMenos16);
+
+		// Mostrando os nomes das pessoas com menos de 16 anos, se houver
+
+		System.out.println("Nomes das pessoas com menos de 16 anos:");
+		for (Pessoas pessoa : pessoas) {
+			if (pessoa.getIdade() < 16) {
+				System.out.println(pessoa.getNome());
+			}
+		}
+
+		sc.close();
+	}
+}

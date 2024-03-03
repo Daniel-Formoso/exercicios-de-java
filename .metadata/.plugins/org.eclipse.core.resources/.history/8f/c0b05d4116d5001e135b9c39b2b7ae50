@@ -1,0 +1,53 @@
+package entitiesEx1;
+
+public class Fatura {
+
+	public String num;
+	public String descricao;
+	public int quantItens;
+	public double precoItens;
+
+	public Fatura(String num, String descricao, int quantItens, double precoItens) {
+		this.num = num;
+		this.descricao = descricao;
+		this.quantItens = quantItens;
+		this.precoItens = precoItens;
+	}
+
+	public String getNum() {
+		return num;
+	}
+
+	public void setNum(String num) {
+		this.num = num;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getQuantItens() {
+		return quantItens;
+	}
+
+	public void setQuantItens(int quantItens) {
+		this.quantItens = quantItens;
+	}
+
+	public double getPrecoItens() {
+		return precoItens;
+	}
+
+	public void setPrecoItens(double precoItens) {
+		this.precoItens = precoItens;
+	}
+	
+	public void getTotalFatura(double totalFatura) {
+		totalFatura = quantItens * precoItens;		
+	}
+
+}

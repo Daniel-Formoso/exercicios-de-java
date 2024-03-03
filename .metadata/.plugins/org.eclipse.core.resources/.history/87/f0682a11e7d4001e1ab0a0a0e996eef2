@@ -1,0 +1,16 @@
+package entities;
+
+public class Conta {
+
+	protected int numConta;
+	public String nomeCliente;
+	public double valorDepositoInicial;
+	public char = 's';
+	
+	public double deposito() {
+		if (resp == 's') {
+			
+		}
+	}
+	
+}

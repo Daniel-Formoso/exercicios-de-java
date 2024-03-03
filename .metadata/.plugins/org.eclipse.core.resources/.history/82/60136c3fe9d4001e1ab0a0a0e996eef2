@@ -1,0 +1,29 @@
+package entities;
+
+public class Conta {
+
+	private int numConta;
+	public String nomeCliente;
+	public double valorDepositoInicial;
+	
+	public Conta() {
+		
+	}
+	
+	public Conta(int numConta, String nomeCliente, double valorDepositoInicial) {
+		this.numConta = numConta;
+		this.nomeCliente = nomeCliente;
+		this.valorDepositoInicial = valorDepositoInicial;
+	}
+	
+	public double deposito() {
+		if (resp == 's') {
+			return valorDepositoInicial;
+		}
+	}
+	
+	public double saque() {
+		
+	}
+	
+}

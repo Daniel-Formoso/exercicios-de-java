@@ -1,0 +1,28 @@
+package applicationEx1;
+
+import java.util.Scanner;
+
+import entitiesEx1.Retangulo;
+
+public class Program1 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Retangulo ret = new Retangulo();
+		
+		System.out.print("Digite a largura do retângulo: ");
+		ret.largura = sc.nextDouble();
+		
+		System.out.print("Digite a altura do retângulo: ");
+		ret.altura = sc.nextDouble();
+		
+		System.out.printf("ÁREA: %.2f%n" + ret.area());
+		System.out.printf("PERÍMETRO: %.2f" + ret.perimetro());
+		System.out.printf("DIAGONAL: %.2f" + ret.diagonal());
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+/*Fazer um programa para ler um número inteiro N e depois um vetor de N números reais. Em seguida,
+mostrar na tela a média aritmética de todos elementos com três casas decimais. Depois mostrar todos
+os elementos do vetor que estejam abaixo da média, com uma casa decimal cada. */
+
+package applicationEx7;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class abaixo_da_media {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int n;
+		double media = 0;
+		double somaRes = 0;
+				
+		System.out.print("Quantos elementos vai ter o vetor? ");
+		n = sc.nextInt();
+		
+		double[] vetor = new double[n];
+		double[] mediaRes = new double[n];
+		double[] somaRes = new double[n];
+
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print("Digite um número: ");
+			vetor[i] = sc.nextDouble();
+		}
+		
+		for (int i = 0; i < somaRes.length; i++) {
+			somaRes = vetor[i]++;
+		}
+		System.out.println(somaRes);
+		//media
+		
+		for (int i = 0; i < mediaRes.length; i++) {
+			System.out.print("Média do vetor = " +mediaRes);
+			
+		}
+		
+		sc.close();
+	}
+
+}

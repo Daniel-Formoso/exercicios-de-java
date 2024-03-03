@@ -1,0 +1,13 @@
+package entities;
+
+public class Conversor {
+
+	public static double iof() {
+		return 6 / 100;
+	}
+	
+	public static double valorReal(double quantia, double precoDolar) {
+		return quantia * precoDolar * (1.0 - iof());
+	}
+	
+}

@@ -1,0 +1,32 @@
+package applicaton;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Employees;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		List<Integer> list = new ArrayList<>();
+		
+		int n;
+		
+		System.out.print("Quantos funciionários serão registrados? ");
+		n = sc.nextInt();
+		
+		Employees emp = new Employees(id, name, salary); 
+		
+		
+		
+		sc.close();
+		
+	}
+
+}

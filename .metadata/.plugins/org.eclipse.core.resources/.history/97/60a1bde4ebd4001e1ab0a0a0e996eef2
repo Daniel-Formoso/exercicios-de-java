@@ -1,0 +1,20 @@
+package entities;
+
+public class Conta {
+
+	public int numConta;
+	public String nomeCliente;
+	public double valorDepositoInicial;
+	public String resp;
+		
+	public double deposito() {
+		if (resp == "s") {
+			
+		}
+	}
+	
+	public double saque() {
+		
+	}
+	
+}

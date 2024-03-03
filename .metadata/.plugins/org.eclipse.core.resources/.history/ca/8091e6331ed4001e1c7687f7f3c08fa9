@@ -1,0 +1,30 @@
+/*Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são
+maiores do que 8.*/
+
+package exercicios_treinofor;
+
+import java.util.Scanner;
+
+public class Exercicio11 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int soma = 0;
+		
+		for (int i = 1; i <= 20; i++) {
+			int x = sc.nextInt();
+			if (x < 8) {
+				soma += x;
+			}
+			
+		}
+		
+		System.out.println("Você digitou " + soma + " números maiores que 8.");
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+package applicationEx3;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entitiesEx3.Aluno;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Aluno aluno = new Aluno();
+		
+		System.out.print("Nome: ");
+		aluno.nome = sc.next();
+		
+		System.out.print("Nota 1: ");
+		aluno.n1 = sc.nextDouble();
+		
+		System.out.print("Nota 2: ");
+		aluno.n2 = sc.nextDouble();
+		
+		System.out.print("Nota 3: ");
+		aluno.n3 = sc.nextDouble();
+		
+		System.out.printf("Nota final: %.2f%n" +aluno.somaNota());
+		
+		if (aluno.somaNota() 60) {
+			System.out.println("Reprovado.");
+			System.out.printf("Faltou %.2f%n" +aluno.pontosFaltantes());
+		}else {
+			System.out.println("Aprovado.");
+		}
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package entitiesEx1;
+
+public class Retangulo {
+	
+	public double largura;
+	public double altura;
+	
+	
+	public double area() {
+		double a = largura * altura / 2;
+		return a;
+	}
+	
+	public double perimetro() {
+		double p = largura * 2 + altura * 2;
+		return p;
+	}
+	
+	public double diagonal() {
+		double d = Math.sqrt(altura * 2) + (largura * 2);
+		return d;
+	}
+}

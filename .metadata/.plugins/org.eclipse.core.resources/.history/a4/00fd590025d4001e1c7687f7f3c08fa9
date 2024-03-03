@@ -1,0 +1,30 @@
+/*Escreva um algoritmo que leia uma sequência de números do usuário e realize a
+soma desses números. Encerre a execução quando um número negativo for digitado.*/
+
+package exercicios_treinofor;
+
+import java.util.Scanner;
+
+public class Exercicio15 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Quantos números você quer digitar? ");
+		int x = sc.nextInt();
+		
+		int soma = 0;
+		
+		for (int i = 1; i <= x; i++) {
+			if (x ) {
+				
+			}
+		}
+		
+		
+		sc.close();
+		
+	}
+
+}

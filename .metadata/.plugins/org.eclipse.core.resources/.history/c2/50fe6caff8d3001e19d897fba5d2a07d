@@ -1,0 +1,30 @@
+/*Crie um algoritmo leia um número do usuário e exiba a sua tabuada de
+multiplicação.*/
+
+package exercicios_treinofor;
+
+import java.util.Scanner;
+
+public class Exercicio10 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite o número: ");
+		int num = sc.nextInt();
+
+		for (int i = 1; i <= 10; i++) {
+			int x = sc.nextInt();
+			int produto = x * i;
+			System.out.println(x + " X " + i + " = " + produto);
+
+			
+		}
+
+
+		sc.close();
+
+	}
+
+}

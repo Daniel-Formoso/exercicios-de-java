@@ -1,0 +1,12 @@
+package entities;
+
+public class Conversor {
+
+	public double dolarDia;
+	public double valorDolares;
+	
+	public double novoValor() {
+		return dolarDia * valorDolares - (novoValor() * 6 / 100);
+	}
+	
+}
